@@ -1,0 +1,83 @@
+
+{
+  "version": "2025.1.0",
+  "effectiveDate": "2025-01-01",
+  "country": "KR",
+  "currency": "KRW",
+  "lastUpdated": "2025-01-01",
+  "source": "국세청, 국민연금공단, 건강보험공단, 근로복지공단",
+  
+  "insuranceRates": {
+    "nationalPension": {
+      "name": "국민연금",
+      "rate": 0.045,
+      "employeeRate": 0.045,
+      "employerRate": 0.045,
+      "description": "노후 생활 보장을 위한 공적 연금",
+      "maxBase": 5900000,
+      "minBase": 370000,
+      "link": "https://www.nps.or.kr"
+    },
+    "healthInsurance": {
+      "name": "건강보험",
+      "rate": 0.03545,
+      "employeeRate": 0.03545,
+      "employerRate": 0.03545,
+      "description": "의료비 부담을 덜어주는 사회보험",
+      "link": "https://www.nhis.or.kr"
+    },
+    "longTermCare": {
+      "name": "장기요양보험",
+      "rate": 0.1227,
+      "baseOn": "healthInsurance",
+      "description": "노인 장기요양을 위한 사회보험",
+      "calculation": "건강보험료의 12.27%",
+      "link": "https://www.longtermcare.or.kr"
+    },
+    "employmentInsurance": {
+      "name": "고용보험",
+      "rate": 0.009,
+      "employeeRate": 0.009,
+      "employerRate": 0.011,
+      "description": "실업 시 생활 안정을 위한 보험",
+      "note": "사업주는 고용안정·직업능력개발사업 보험료 0.2% 추가 부담",
+      "link": "https://www.ei.go.kr"
+    }
+  },
+  
+  "incomeTaxRates": {
+    "name": "근로소득세",
+    "description": "근로의 대가로 받는 소득에 대한 세금",
+    "brackets": [
+      { "min": 0, "max": 14000000, "rate": 0.06, "deduction": 0 },
+      { "min": 14000000, "max": 50000000, "rate": 0.15, "deduction": 1260000 },
+      { "min": 50000000, "max": 88000000, "rate": 0.24, "deduction": 5760000 },
+      { "min": 88000000, "max": 150000000, "rate": 0.35, "deduction": 15440000 },
+      { "min": 150000000, "max": 300000000, "rate": 0.38, "deduction": 19940000 },
+      { "min": 300000000, "max": 500000000, "rate": 0.40, "deduction": 25940000 },
+      { "min": 500000000, "max": 1000000000, "rate": 0.42, "deduction": 35940000 },
+      { "min": 1000000000, "max": null, "rate": 0.45, "deduction": 65940000 }
+    ],
+    "localIncomeTaxRate": 0.1,
+    "localIncomeTaxDescription": "근로소득세의 10%",
+    "link": "https://www.nts.go.kr"
+  },
+  
+  "commonDeductions": {
+    "mealAllowance": {
+      "name": "식대",
+      "nonTaxableLimit": 200000,
+      "description": "월 20만원까지 비과세"
+    },
+    "carAllowance": {
+      "name": "자가운전보조금",
+      "nonTaxableLimit": 200000,
+      "description": "월 20만원까지 비과세 (업무용 차량)"
+    },
+    "childcareAllowance": {
+      "name": "육아수당",
+      "nonTaxableLimit": 200000,
+      "description": "6세 이하 자녀, 월 20만원까지 비과세"
+    }
+  }
+}

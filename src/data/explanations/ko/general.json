@@ -1,0 +1,189 @@
+{
+  "income": {
+    "basicSalary": {
+      "title": "기본급",
+      "icon": "bi-cash",
+      "shortDescription": "근로계약에 명시된 기본 급여",
+      "detailDescription": "기본급은 근로자가 정상적으로 근로를 제공했을 때 지급받는 기본적인 임금입니다. 각종 수당을 제외한 순수한 기본 급여를 의미합니다.",
+      "keyPoints": [
+        "근로계약서에 명시된 금액",
+        "시간외 수당 계산의 기준",
+        "퇴직금 산정 기준에 포함",
+        "최저임금 이상이어야 함"
+      ],
+      "faq": [
+        {
+          "question": "기본급과 통상임금의 차이는?",
+          "answer": "기본급은 순수한 기본 급여만을 의미하지만, 통상임금은 기본급과 정기적·일률적으로 지급되는 수당을 포함한 개념입니다."
+        }
+      ]
+    },
+    
+    "overtimePay": {
+      "title": "시간외수당",
+      "icon": "bi-clock-history",
+      "shortDescription": "정규 근로시간 외 근무에 대한 수당",
+      "detailDescription": "법정 근로시간(주 40시간)을 초과하여 근무한 시간에 대해 지급되는 수당입니다. 통상임금의 150% 이상을 지급해야 합니다.",
+      "keyPoints": [
+        "평일 연장근로: 통상임금의 150%",
+        "휴일근로: 통상임금의 150%",
+        "야간근로(22시~06시): 통상임금의 150%",
+        "중복 시 각각 가산"
+      ],
+      "calculation": {
+        "formula": "시간외수당 = 통상시급 × 1.5 × 연장근로시간",
+        "example": "시급 15,000원, 10시간 연장근로: 15,000 × 1.5 × 10 = 225,000원"
+      }
+    },
+    
+    "bonus": {
+      "title": "상여금",
+      "icon": "bi-gift",
+      "shortDescription": "정기 또는 부정기적으로 지급되는 추가 급여",
+      "detailDescription": "기본급 외에 근로자의 근무성과나 회사 실적에 따라 지급되는 금액입니다. 정기상여와 성과상여로 구분됩니다.",
+      "keyPoints": [
+        "정기상여: 규정에 따라 정기적으로 지급",
+        "성과상여: 개인이나 회사 성과에 따라 지급",
+        "과세 대상 (일부 예외 있음)",
+        "퇴직금 산정 시 포함 여부는 지급 조건에 따름"
+      ]
+    },
+    
+    "mealAllowance": {
+      "title": "식대",
+      "icon": "bi-cup-hot",
+      "shortDescription": "식사 비용 지원 수당",
+      "detailDescription": "근로자의 식사 비용을 지원하기 위해 지급되는 수당입니다. 월 20만원까지는 비과세 혜택이 있습니다.",
+      "keyPoints": [
+        "월 20만원까지 비과세",
+        "20만원 초과분은 과세 대상",
+        "현금 지급 시에만 비과세 적용",
+        "식권이나 현물 제공은 과세"
+      ],
+      "taxBenefit": {
+        "limit": 200000,
+        "condition": "현금으로 지급 시"
+      }
+    },
+    
+    "transportAllowance": {
+      "title": "교통비",
+      "icon": "bi-bus-front",
+      "shortDescription": "출퇴근 교통비 지원",
+      "detailDescription": "근로자의 출퇴근에 소요되는 교통비를 지원하는 수당입니다. 실비 변상적 성격의 경우 비과세될 수 있습니다.",
+      "keyPoints": [
+        "대중교통 이용 시 실비 지급 가능",
+        "자가용 이용자는 과세 대상",
+        "출장 관련 교통비는 별도"
+      ]
+    },
+    
+    "carAllowance": {
+      "title": "차량유지비",
+      "icon": "bi-car-front",
+      "shortDescription": "업무용 자가 차량 유지비 지원",
+      "detailDescription": "본인 소유 차량을 업무에 사용하는 경우 지급되는 수당입니다. 월 20만원까지 비과세 혜택이 있습니다.",
+      "keyPoints": [
+        "월 20만원까지 비과세",
+        "업무용 사용이 전제 조건",
+        "운행일지 작성 필요할 수 있음",
+        "20만원 초과분은 과세"
+      ],
+      "taxBenefit": {
+        "limit": 200000,
+        "condition": "업무용 차량 사용 시"
+      }
+    }
+  },
+  
+  "deductions": {
+    "advancePayment": {
+      "title": "가불금",
+      "icon": "bi-cash-coin",
+      "shortDescription": "급여 선지급분 공제",
+      "detailDescription": "급여일 전에 미리 지급받은 금액을 급여에서 공제하는 항목입니다.",
+      "keyPoints": [
+        "근로자 요청에 의한 선지급",
+        "당월 급여에서 전액 공제",
+        "이자는 부과하지 않음"
+      ]
+    },
+    
+    "absence": {
+      "title": "결근공제",
+      "icon": "bi-calendar-x",
+      "shortDescription": "무단결근에 대한 급여 공제",
+      "detailDescription": "정당한 사유 없이 결근한 날에 대해 급여를 공제하는 항목입니다.",
+      "calculation": {
+        "formula": "결근공제액 = 일 통상임금 × 결근일수",
+        "note": "회사 규정에 따라 추가 제재금이 있을 수 있음"
+      }
+    },
+    
+    "loanRepayment": {
+      "title": "대출상환",
+      "icon": "bi-bank",
+      "shortDescription": "회사 대출금 상환",
+      "detailDescription": "회사에서 받은 대출금을 급여에서 분할 상환하는 금액입니다.",
+      "keyPoints": [
+        "학자금, 주택자금 대출 등",
+        "상환 스케줄에 따라 공제",
+        "이자 포함 여부는 계약에 따름"
+      ]
+    }
+  },
+  
+  "summary": {
+    "grossPay": {
+      "title": "지급액계",
+      "icon": "bi-plus-circle",
+      "shortDescription": "총 지급액",
+      "detailDescription": "기본급과 각종 수당을 모두 합한 총 지급액입니다. 세금과 보험료를 공제하기 전 금액입니다.",
+      "calculation": "지급액계 = 기본급 + 모든 수당 + 상여금"
+    },
+    
+    "totalDeduction": {
+      "title": "공제액계",
+      "icon": "bi-dash-circle",
+      "shortDescription": "총 공제액",
+      "detailDescription": "급여에서 공제되는 모든 항목의 합계입니다. 4대보험료, 세금, 기타 공제 항목을 포함합니다.",
+      "calculation": "공제액계 = 4대보험료 + 소득세 + 지방소득세 + 기타공제"
+    },
+    
+    "netPay": {
+      "title": "실수령액",
+      "icon": "bi-wallet2",
+      "shortDescription": "실제 수령 금액",
+      "detailDescription": "모든 공제를 마친 후 실제로 통장에 입금되는 금액입니다.",
+      "calculation": "실수령액 = 지급액계 - 공제액계",
+      "keyPoints": [
+        "통장 입금액과 일치해야 함",
+        "급여명세서 최종 확인 항목",
+        "이체 수수료는 별도"
+      ]
+    }
+  },
+  
+  "generalInfo": {
+    "payPeriod": {
+      "title": "급여기간",
+      "description": "해당 급여가 적용되는 근무 기간"
+    },
+    "payDate": {
+      "title": "지급일",
+      "description": "급여가 실제로 지급되는 날짜"
+    },
+    "workDays": {
+      "title": "근무일수",
+      "description": "해당 기간 중 실제 근무한 일수"
+    },
+    "department": {
+      "title": "부서",
+      "description": "소속 부서명"
+    },
+    "position": {
+      "title": "직급",
+      "description": "현재 직급/직책"
+    }
+  }
+}
