@@ -498,7 +498,7 @@ export default {
 
 html, body {
   height: 100%;
-  overflow: hidden;
+  /*overflow: hidden;*/
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   -webkit-text-size-adjust: 100%; 
@@ -506,7 +506,7 @@ html, body {
 }
 
 #app {
-  height: 100vh;
+  /*height: 100vh;*/
   background: #f8f9fa;
 }
 
